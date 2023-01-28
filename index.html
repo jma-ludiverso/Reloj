@@ -1,0 +1,324 @@
+<html>
+    <head>
+        <!-- References -->
+        <!-- https://codepen.io/afarrar/pen/JRaEjP -->
+        <!-- https://dev.to/code_mystery/simple-analog-clock-using-html-css-javascript-2c6a -->
+        <!-- https://www.foolishdeveloper.com/2021/06/make-analog-clock-using-html-css-and.html -->
+        <!-- ------ -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/site.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <script src="js/clock.js"></script>
+    </head>
+    <body>
+        <div class="row" style="height: -webkit-fill-available;">
+            <div class="col-xs-6" style="display: flex;align-items: center;">
+              <div class="clock_digital_external">
+                <div id="MyClockDisplay" class="clock_digital" >
+                  <input type="text" class="form-control clock_digital digital" id="txtDigital" value="00:00:00">
+                </div>
+                <div class="form-check form-switch digital_hourSelection">
+                  <input id="hourSelection" class="form-check-input" style="background-color: darkslategray;margin-left: auto;" type="checkbox" checked>
+                  <label class="form-check-label" for="flexSwitchCheckChecked">Usar hora actual</label>            
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6" style="display: flex;align-items: center;margin-top: 20px;">
+                <div class="clock_analog_external">
+                  <ul class='minutes'>
+                    <li>
+                      <span>
+                        05
+                      </span>
+                    </li>
+                    <li>
+                      <span>
+                        10
+                      </span>
+                    </li>
+                    <li>
+                      <div class="form-floating">
+                        <span>
+                          <label id="cuarto" title="... y cuarto ..."> 15 </label>
+                        </span>
+                        <label for="cuarto" class="float_minutes_15">... <label style="color:lightgreen;font-size:2rem; font-weight: bold;">y</label> cuarto ...</label>
+                      </div>
+                    </li>
+                    <li>
+                      <span>
+                        20
+                      </span>
+                    </li>
+                    <li>
+                      <span>
+                        25
+                      </span>
+                    </li>
+                    <li>
+                      <div class="form-floating">
+                        <span>
+                          <label id="mmedia" title="... y media ..."> 30 </label>
+                        </span>
+                        <label for="mmedia" class="float_minutes_30"><i class="fa fa-star-half-o" aria-hidden="true"></i> y media</label>
+                      </div>
+                    </li>
+                    <li>
+                      <span>
+                        35
+                      </span>
+                    </li>
+                    <li>
+                      <span>
+                        40
+                      </span>
+                    </li>
+                    <li>
+                      <div class="form-floating">
+                        <span>
+                          <label id="mcuarto" title="... menos cuarto ..."> 45 </label>
+                        </span>
+                        <label for="mcuarto" class="float_minutes_45">... <label style="color: red;">menos</label> cuarto ...</label>
+                      </div>
+                    </li>
+                    <li>
+                      <span>
+                        50
+                      </span>
+                    </li>
+                    <li>
+                      <span>
+                        55
+                      </span>
+                    </li>
+                    <li>
+                      <div class="form-floating">
+                        <span>
+                          <label id="mpunto" title="... en punto ..."> 00 </label>
+                        </span>
+                        <label for="mpunto" class="float_minutes_00"><i class="fa fa-clock-o" aria-hidden="true"></i> en punto</label>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="clock_analog">
+                    <ul class='hours'>
+                        <li>
+                          <span>
+                            1
+                          </span>
+                        </li>
+                        <li>
+                          <span>
+                            2
+                          </span>
+                        </li>
+                        <li>
+                          <span>
+                            3
+                          </span>
+                        </li>
+                        <li>
+                          <span>
+                            4
+                          </span>
+                        </li>
+                        <li>
+                          <span>
+                            5
+                          </span>
+                        </li>
+                        <li>
+                          <span>
+                            6
+                          </span>
+                        </li>
+                        <li>
+                          <span>
+                            7
+                          </span>
+                        </li>
+                        <li>
+                          <span>
+                            8
+                          </span>
+                        </li>
+                        <li>
+                          <span>
+                            9
+                          </span>
+                        </li>
+                        <li>
+                          <span>
+                            10
+                          </span>
+                        </li>
+                        <li>
+                          <span>
+                            11
+                          </span>
+                        </li>
+                        <li>
+                          <span>
+                            12
+                          </span>
+                        </li>
+                    </ul>
+                    <div class="outer-clock-face">
+                        <div class="marking marking-one"></div>
+                        <div class="marking marking-two"></div>
+                        <div class="marking marking-three"></div>
+                        <div class="marking marking-four"></div>
+                        <div id="analog" class="inner-clock-face">
+                            <div id="hourhand" class="hand hour-hand"></div>
+                            <div id="minutehand" class="hand min-hand"></div>
+                            <div class="hand second-hand"></div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+
+            $(function () {
+    
+                $(document).ready(function () {
+                    var isTouchDevice = 'ontouchstart' in document.documentElement;
+                    showTime();
+
+                    $( "#hourhand" ).mousedown(function(event) {
+                      if(event.which==1 && !isTouchDevice){
+                        handDown("hour");
+                      }
+                    });
+
+                    $('#hourhand').on('touchstart', function(){
+                      if (isTouchDevice)  {   
+                        handDown("hour"); 
+                      }
+                    });
+
+                    $( "#minutehand" ).mousedown(function(event) {
+                      if(event.which==1 && !isTouchDevice){
+                        handDown("minute");
+                      }
+                    });
+
+                    $('#minutehand').on('touchstart', function(){
+                      if (isTouchDevice)  {   
+                        handDown("minute"); 
+                      }
+                    });
+
+                    $( ".clock_analog_external" ).mousemove(function(event) {
+                      if(drag && !isTouchDevice){
+                        if(draghand=="hour"){
+                          setHourMinuteHand(event.pageX - $( "#analog" ).offset().left, event.pageY - $( "#analog" ).offset().top, false);
+                        }else{
+                          setHourMinuteHand(event.pageX - $( "#analog" ).offset().left, event.pageY - $( "#analog" ).offset().top, true);
+                        } 
+                      }
+                    });
+
+                    $('.clock_analog_external').on('touchmove', function(event){
+                      if (drag && isTouchDevice)  {
+                        if(draghand=="hour"){
+                          setHourMinuteHand(event.changedTouches[0].pageX - $( "#analog" ).offset().left, event.changedTouches[0].pageY - $( "#analog" ).offset().top, false);
+                        }else{
+                          setHourMinuteHand(event.changedTouches[0].pageX - $( "#analog" ).offset().left, event.changedTouches[0].pageY - $( "#analog" ).offset().top, true);
+                        } 
+                        //event.preventDefault();
+                      }
+                    });
+
+                    $( "#hourhand" ).mouseup(function() {
+                      if(!isTouchDevice){
+                        handUp();
+                      }
+                    });
+
+                    $('#hourhand').on('touchend', function(){
+                      if (isTouchDevice)  {   
+                        handUp();
+                      }
+                    });
+
+                    $( "#minutehand" ).mouseup(function() {
+                      if(!isTouchDevice){
+                        handUp();
+                      }
+                    });
+
+                    $('#minutehand').on('touchend', function(){
+                      if (isTouchDevice)  {   
+                        handUp();
+                      }
+                    });
+
+                    $( "#txtDigital" ).blur(function( ) {
+                      focused = false;
+                      var num = digitalText($( "#txtDigital" ).val());
+                      $( "#txtDigital" ).val(num);
+                      setTimeout(showTime, 1000);
+                    });
+
+                    $( "#txtDigital" ).focus(function( ) {
+                      if(!focused){
+                        focused = true;
+                        $("#hourSelection").prop("checked", false);
+                        $("#txtDigital").prop({
+                            'selectionStart': 0,
+                            'selectionEnd': 2
+                        });
+                      }
+                    });
+
+                    $( "#txtDigital" ).keypress(function( event ) {
+                      if ( (event.which < 48 && event.which!=13) || event.which > 58 ) {
+                        event.preventDefault();
+                      }
+                    });
+
+                    $( "#txtDigital" ).keyup(function( event ) {
+                      var pos = $("#txtDigital").prop('selectionStart');
+                      switch ( event.which ) {
+                        case 13:
+                          $( "#txtDigital" ).blur();
+                          break;
+                        case 37:
+                          if(pos==0){
+                            $( "#txtDigital" ).blur();
+                          }else{
+                            $("#txtDigital").prop({
+                              'selectionStart': pos-3,
+                              'selectionEnd': pos-1
+                            });
+                          }
+                          break;
+                        case 39:
+                          if(pos>=$( "#txtDigital" ).val().length-1){
+                            $( "#txtDigital" ).blur();
+                          }else{
+                            $("#txtDigital").prop({
+                              'selectionStart': pos+1,
+                              'selectionEnd': pos+3
+                            });
+                          }
+                          break;
+                      }
+                    });
+
+                });
+    
+            });
+    
+        </script>
+
+    </body>
+</html>
+
