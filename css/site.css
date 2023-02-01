@@ -31,10 +31,20 @@ body {
 
 .clock_digital {
     color: bisque;
+    font-size: -webkit-xxx-large;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+    margin: auto;
+}
+
+@-moz-document url-prefix() {
+  .clock_digital {
+    color: bisque;
     font-size: xxx-large;
     font-family: Orbitron;
     letter-spacing: 7px;
     margin: auto;
+}
 }
 
 .digital{
@@ -197,14 +207,14 @@ input::selection{
   .hand.hour-hand {
     width: 45%;
     z-index: 3;
-    cursor: grab;
+    cursor: pointer;
   }
   
   .hand.min-hand {
     height: 5px;
     z-index: 10;
     width: 87%;
-    cursor: grab;
+    cursor: pointer;
   }
 
   .hand.second-hand {
